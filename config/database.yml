@@ -3,22 +3,22 @@ development:
   encoding: unicode
   database: el_passatge_development
   pool: 5
-  username: banito
-  password: admin
+  username: di36o
+  password:
 
 test:
   adapter: postgresql
   encoding: unicode
   database: el_passatge_test
   pool: 5
-  username: banito
-  password: admin
+  username: di36o
+  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: el_passatge_production
   pool: 5
-  username: banito
-  password: admin
+  username: di36o
+  password:
 
