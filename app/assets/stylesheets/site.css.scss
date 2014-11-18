@@ -1,3 +1,27 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+	body{
+		color: grey;
+	}
+	.logo{
+		width: 200px;
+	}
+	.margined-top{
+		margin-top: -243px;
+  }
+  .margined-bottom{
+  	margin-bottom:  31px;
+  }
+  .rooms_coment{
+  	position: absolute;
+  	bottom: 20px;
+  }
+  .post_relative{
+  	position: relative;
+  }
+  .orbit-container .orbit-slides-container img{
+  	height: 500px;
+  	margin: 0 auto;
+  }
