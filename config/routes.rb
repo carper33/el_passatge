@@ -1,19 +1,12 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-
 
   get '/' => "site#home"
-    resources :bokings 
+    resources :bokings
 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-=======
->>>>>>> d0aecc34a1ed454f7ad420326620a89ec2a252b6
 
-get '/' => 'site#home'
-
-<<<<<<< HEAD
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
