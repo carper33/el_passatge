@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get '/' => "site#home"
-    resources :bokings
+    resources :bookings
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -56,6 +56,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-=======
->>>>>>> d0aecc34a1ed454f7ad420326620a89ec2a252b6
 end
