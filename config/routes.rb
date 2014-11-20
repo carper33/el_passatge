@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
 
-  get '/' => "site#home"
+  get '/' => "bookings#index"
     resources :bookings, :users
 
   namespace :api do
