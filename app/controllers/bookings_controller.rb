@@ -6,8 +6,9 @@ class BookingsController < ApplicationController
 	end
 	def create
 		@booking = Booking.new booking_params
+
     @user = User.new
-    render :action "new", controller: "user"
+    render :action => :new, :controller => :user
 	end
 
 	private

@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
 
   get '/' => "site#home"
-    resources :bookings
+    resources :bookings, :users
 
+  namespace :api do
+    resources :rooms, only: [:index]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
