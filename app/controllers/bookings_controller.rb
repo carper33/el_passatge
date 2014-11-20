@@ -1,13 +1,12 @@
 class BookingsController < ApplicationController
-	helper_method :booking
-
+ 
 	def index
 		@booking = Booking.new
 	end
+
 	def create
 		@booking = Booking.new booking_params
 	end
-
 
 	private
 
