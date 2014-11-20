@@ -1,11 +1,10 @@
 
-<%= form_for @booking do |f| %>
 
 	<%= f.label :pax %>
-	<%= f.text_field :pax, size:4 %>
+	<%= f.text_field :pax,  :required => true, size: 4 %>
 	<br>
 	<%= f.label :date_arrival %>
-	<%= f.text_field :date_arrival, size:4%>
+	<%= f.text_field :date_arrival, required: true, size:4%>
 	<br>
 	<%= f.label :date_departure %>
 	<%= f.text_field :date_departure, size:4 %>
