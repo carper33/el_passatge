@@ -34,9 +34,14 @@
     li{
       height: 32px;
       width: 33px;
-      background-image: url("../img/rrss.png");
+      padding: 0;
+      background-image: url("https://dl.dropboxusercontent.com/u/79814994/cdn.images/rrss.png");
       background-size: 109px 35px;
       margin-left: $base-unit / 4;
+      a{
+        height: inherit;
+        width: inherit;
+      }
     }
 		.fb{
 			background-position: -39px -2px;
