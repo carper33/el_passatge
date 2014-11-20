@@ -2,12 +2,12 @@ class BookingsController < ApplicationController
 	helper_method :booking
 
 	def index
-			@booking= Booking.new
+		@booking= Booking.new
 	end
 	def create
 		
-
 	end
+
 
 
 
