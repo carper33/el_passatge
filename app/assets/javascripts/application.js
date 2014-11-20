@@ -15,10 +15,10 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
+//= require smooth_scrolling
 
 $(function(){
- $(document).foundation(
-  {
+ $(document).foundation({
     ///se toca a partir de aqui
     orbit: {
       animation: 'slide',
@@ -28,8 +28,11 @@ $(function(){
       navigation_arrows: true,
       bullets: true,
     }
-
     //// se toca hasta aqui
-  }
-  );
+  });
+ (function(){
+  smooth_scrolling();
+ }());
+
+
 });
