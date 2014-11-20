@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>ElPassatge</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="contain-to-grid sticky">
+      <nav class="top-bar fixed sticky" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/"><img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/logo.png" alt="Logo Hotel" class="logo"></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><a href="#top">HOTEL</a></li>
+            <li><a href="#rooms">ROOMS</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#rates">RATES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li class="has-dropdown">
+              <a href="#">BOOK NOW</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+                <li class="active"><a href="#">Active link in dropdown</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <%= render "shared/orbit" %>
+    <%= render "shared/rooms" %>
+    <%= render "shared/services" %>
+    <%= render "shared/rates" %>
+    <%= render "shared/contact" %>
+    <%= yield %>
+
+    <footer class="footer row">
+      <ul class="footer_menu inline-list">
+        <li><a href="#top">HOTEL</a></li>
+        <li><a href="#rooms">ROOMS</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#rates">RATES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <ul class="footer_menu social inline-list">
+        <li class="fb"><a href="https://facebook.com"></a></li>
+        <li class="tw"><a href="https://twitter.com"></a></li>
+        <li class="in"><a href="https://linkedin.com"></a></li>
+      </ul>
+      <a class="btn btn-newsletter">Join our newsletter</a>
+      <p class="copyright">© EL PASSATGE.  ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
 </html>

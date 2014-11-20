@@ -1,0 +1,46 @@
+@import "variables";
+
+// panel
+$panel-size: ($max-width / 3.5) - $base-unit - ($base-unit / 10);
+$panel-number: 9;
+
+#navigation{
+  margin: 0 $base-unit $base-unit;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.carousel-container {
+  width: ceil($max-width / 3);
+  height: 16em;
+  position: relative;
+  margin: ($base-unit * 1.5) auto $base-unit;
+  padding: 1em;
+  perspective: $max-width;
+  #carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    figure {
+      display: block;
+      position: absolute;
+      top: $base-unit;
+      $degree : 0;
+      @for $i from 1 through $panel-number {
+        &:nth-child(#{$i}) {
+          transform: rotateY(  #{$degree}deg ) translateZ( ceil(($max-width / 7) / 0.3639) );
+        }
+        $degree: $degree + 40;
+      }
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

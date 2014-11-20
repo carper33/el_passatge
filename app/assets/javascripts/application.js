@@ -12,5 +12,27 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require_tree .
+//= require smooth_scrolling
+
+$(function(){
+ $(document).foundation({
+    ///se toca a partir de aqui
+    orbit: {
+      animation: 'slide',
+      timer_speed: 3000,
+      pause_on_hover: true,
+      animation_speed: 500,
+      navigation_arrows: true,
+      bullets: true,
+    }
+    //// se toca hasta aqui
+  });
+ (function(){
+  smooth_scrolling();
+ }());
+
+
+});

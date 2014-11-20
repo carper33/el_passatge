@@ -1,0 +1,31 @@
+<section class = "row">
+
+  <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+      <li role="menuitem"><a href="#">Booking Form</a></li>
+      <li role="menuitem"><a href="#booking_description">Booking Description</a></li>
+      <li role="menuitem"><a href="#">Personal Data</a></li>
+      <li role="menuitem" class="unavailable" role="button" aria-disabled="true"><a href="#">Confirmation & Payment</a></li>
+  </nav>
+
+  <section class="form">
+  <h2><small>Please, fill the form with your personal info</small></h2>
+    <div class="columns medium-6">
+      <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/4-big-fitness.jpg" alt="Logo Hotel" class="left">
+    </div>
+    <div class="columns medium-6">
+      <form id="booking-form" action="booking.html" name="booking-form">
+        <label for="arrive">Name</label>
+        <input type="text" id="arrive" name="arrive" readonly="readonly">
+        <label for="departure">Mail</label>
+        <input type="text" id="departure" name="departure" readonly="readonly">
+        <label for="phone">Phone</label>
+        <input type="text" id="departure" name="departure" readonly="readonly">
+        <div class="medium-12 columns">
+          <a href="#" id="booking_next" class="btn btn-next rigth">Go to payment</a>
+          <a href="#" class="btn btn-link cancel-booking rigth">Cancel</a>
+        </div>
+      </form>
+    </div>
+
+  </section>
+</section>
