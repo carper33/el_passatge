@@ -16,6 +16,11 @@
 //= require turbolinks
 //= require_tree .
 //= require smooth_scrolling
+//calendario date arrival
+$(function (){
+        $('#booking_date_arrival').datepicker();
+});
+
 
 $(function(){
  $(document).foundation({
