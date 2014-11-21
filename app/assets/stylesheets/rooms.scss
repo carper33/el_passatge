@@ -4,16 +4,21 @@
 	&:hover{
 		opacity: 0.4;
 	}
+
 }
 
 .rooms_coment{
 	display: none;
 	bottom: 0;
-	position: absolute;
+	position: absolute !important;
 	padding: 1em;
 	background: rgba(255, 255, 255, 0.8);
 	width: 100%;
-}
+	&:hover{
+		display: block;
+		}
+	}
+
 
 .relative-container{
   position: relative;
