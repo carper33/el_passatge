@@ -1,25 +1,48 @@
 @import "variables";
-
-.img-room{
-	&:hover{
-		opacity: 0.4;
+.relative-container{
+	.img-room{
+		&:hover{
+			opacity: 0.3;
+			&+.rooms_coment{
+				display: block;
+			}
+		}
+		&+.rooms_coment{
+			display: none;
+			text-align: center;
+			padding-left: 40px;
+		}
 	}
+}
+.relative-container{
+  position: relative;
 
 }
 
-.rooms_coment{
-	display: none;
-	bottom: 0;
-	position: absolute !important;
-	padding: 1em;
-	background: rgba(255, 255, 255, 0.8);
-	width: 100%;
-	&:hover{
-		display: block;
-		}
-	}
+.right2{
+	padding-right: 15px;
+}
+.foto1{
+	width: 515px;
+	height: 431px;
+}
 
+.foto4{
+	width: 258px;
+	height: 212px;
+}
 
-.relative-container{
-  position: relative;
+.foto5{
+	width: 515px;
+	height: 212px;
+}
+
+.foto6{
+	width: 773px;
+	height: 212px;
+}
+
+.foto7{
+	width: 773px;
+	height: 456px;
 }

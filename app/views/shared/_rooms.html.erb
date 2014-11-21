@@ -1,36 +1,40 @@
 <section id="rooms">
   <article class="rooms row">
-    <div class="medium-6 columns margined-bottom relative-container">
-      <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room1.jpg" alt="images" class="img-room">
-      <p class="rooms_coment">Standard room</p>
-    </div>
-    <div class="dr">
+    <div class="row">
       <div class="medium-6 columns margined-bottom relative-container">
-        <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room2.jpg" alt="images" class="img-room right">
-        <p class="rooms_coment">Deluxe room</p>
+        <%= image_tag ("room1.jpg"), :class => "img-room foto1"  %>
+        <p class="rooms_coment">Standard room</p>
       </div>
+      <div class="dr">
+        <div class="medium-6 columns margined-bottom relative-container">
+          <%= image_tag ("room2.jpg"), :class => "img-room right2"  %>
+          <p class="rooms_coment">Deluxe room</p>
+        </div>
 
-      <div class="medium-6 columns margined-bottom relative-container">
-        <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room3.jpg" alt="images" class="img-room right">
-        <p class="rooms_coment">Deluxe room</p>
+        <div class="medium-6 columns margined-bottom relative-container">
+          <%= image_tag ("room3.jpg"), :class => "img-room right2"  %>
+          <p class="rooms_coment">Deluxe room</p>
+        </div>
       </div>
     </div>
-    <div class="medium-3 columns margined-bottom relative-container">
-      <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room4.jpg" alt="images" class="img-room">
-      <p class="rooms_coment">Standard room</p>
-    </div>
-    <div class="medium-6 columns margined-bottom relative-container">
-      <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room5.jpg" alt="images" class="img-room">
-      <p class="rooms_coment">Standard room</p>
-    </div>
-    <div class="medium-9 columns margined-bottom relative-container">
-      <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room6.jpg" alt="images" class="img-room">
-      <p class="rooms_coment">Special room</p>
-    </div>
-    <div class="dr">
-      <div class="medium-3 columns margined-bottom margined-top relative-container">
-        <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room7.jpg" alt="images" class="img-room right">
+    <div class="row">
+      <div class="medium-3 columns margined-bottom relative-container">
+        <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room4.jpg" alt="images" class="img-room foto4">
+        <p class="rooms_coment">Standard room</p>
+      </div>
+      <div class="medium-6 columns margined-bottom relative-container">
+        <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room5.jpg" alt="images" class="img-room foto5">
+        <p class="rooms_coment">Standard room</p>
+      </div>
+      <div class="medium-9 columns margined-bottom relative-container">
+        <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/room6.jpg" alt="images" class="img-room foto6">
         <p class="rooms_coment">Special room</p>
+      </div>
+      <div class="dr">
+        <div class="medium-3 columns margined-bottom margined-top relative-container">
+          <%= image_tag ("room7.jpg"), :class => "img-room right2 foto7"  %>
+          <p class="rooms_coment">Special room</p>
+        </div>
       </div>
     </div>
   </article>
