@@ -1,0 +1,37 @@
+// Import variables
+@import "variables";
+
+@mixin border{
+  border: 1px solid $primary-color;
+  border-collapse: collapse;
+}
+.table{
+  text-align: center;
+  margin: 0 auto $base-unit;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  thead{
+    tr{
+      th{
+        &:first-child{
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  th,
+  td {
+    border: 1px solid $primary-color;
+    padding: $base-unit/1.5;
+    color: $text-color;
+  }
+  td:hover{
+    background: rgba($secondary-color, 0.2);
+  }
+  th{
+    font-weight: normal;
+    color: $primary-color;
+    background: $secondary-color;
+  }
+
+}
