@@ -17,6 +17,7 @@
 //= require_tree .
 //= require smooth_scrolling
 
+
 $(function(){
  $(document).foundation({
     ///se toca a partir de aqui
@@ -32,6 +33,8 @@ $(function(){
   });
  (function(){
   smooth_scrolling();
+  $('#date_arrival').datepicker({ dateFormat: "yy-mm-dd" });
+  $('#date_departure').datepicker({ dateFormat: "yy-mm-dd" });
  }());
 
 
