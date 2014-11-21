@@ -8,12 +8,15 @@ class BookingsController < ApplicationController
 	def new
     @rooms    = Room.all
 		@booking  = Booking.new
-    @user     = User.new
 	end
 
 	def create
 		@booking  = Booking.new booking_params
-    @user     = User.new user_params
+    @user     = User.new
+    #if params[:email] && params[:name] && params[:phone]
+    #  @user     = User.new user_params
+    #  @booking  = Booking.new booking_params
+    #end
 	end
 
 	private

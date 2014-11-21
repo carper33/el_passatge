@@ -8,4 +8,8 @@ class Booking < ActiveRecord::Base
 	validates :final_price, presence: true, numericality: true
 	validates :room_id, presence: true
 	validates :user_id, presence: true
+
+  def before_save
+
+  end
 end
