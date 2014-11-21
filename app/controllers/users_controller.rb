@@ -7,15 +7,12 @@ class UsersController < ApplicationController
     @user = User.new users_params
 
     if @user.save
-
       @booking = user.bookings.new booking_params
       @booking.save
-      msg_save = 'Booking saved'
-
+      flash[:success] = "Entry successfully created"
       render 'new'
     else
-      @booking.valid?
-      @booking.errors.full_messages
+      flash[:alert] = "Error validating"
       render 'new'
     end
 

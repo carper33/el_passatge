@@ -1,4 +1,53 @@
-<h2>Booking confirmation</h2>
-<%= @user.name  %>
-<%= @user.email  %>
-<%= @user.phone %>
+<section class = "row">
+  <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+      <li role="menuitem"><a href="#">Booking Form</a></li>
+      <li role="menuitem"><a href="#">Booking Description</a></li>
+      <li role="menuitem" class="unavailable" role="button" aria-disabled="true"><a href="#">Personal Data</a></li>
+      <li role="menuitem" class="unavailable" role="button" aria-disabled="true"><a href="#">Confirmation & Payment</a></li>
+  </nav>
+  <div class="row"><br>
+    <div class="medium-10 columns medium-centered">
+      <%= flash_message %>
+    </div>
+    <br>
+  </div>
+
+  <h2><small>Reserve confirmation</small></h2>
+  <div class="columns medium-6 medium-centered">
+    <table class="booking_table">
+      <tr>
+        <td width="120">Reservation owner</td>
+        <td id="arrive"><%= @user.name  %></td>
+      </tr>
+      <tr>
+        <td width="120">Phone</td>
+        <td id="arrive"><%= @user.phone %></td>
+      </tr>
+      <tr>
+        <td width="120">Email</td>
+        <td id="arrive"><%= @user.email  %></td>
+      </tr>
+      <tr>
+        <td>Arrival Date:</td>
+        <td><%= @booking.date_arrival %></td>
+      </tr>
+      <tr>
+        <td>Departure Date:</td>
+        <td><%= @booking.date_departure  %></td>
+      </tr>
+      <tr>
+        <td>Pax:</td>
+        <td><%= @booking.pax  %> persons</td>
+      </tr>
+      <tr>
+        <td>Rate:</td>
+        <td><%= @booking.final_price  %> €</td>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td>Try to restart the parameters and / or select a different combination of parameters (minimum date of entry and departure) to perform a new search to perform a new searchparameters. </td>
+      </tr>
+    </table>
+  </div>
+
+</section>
