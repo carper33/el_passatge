@@ -3,12 +3,12 @@
   <section class="booking_container">
     <h2>Welcome! <small>Select your rooms</small></h2>
     <a href="#" class="close">×</a>
-<%= render "shared/form" %>
+    <%= render "shared/form" %>
+    <a class="close-reveal-modal">&#215;</a>
+    <%= render "shared/form" %>
     <p>The search returned no results for one of the following reasons:
     A lack of room availability for the combination of parameters used.
     There are any restrictions for the selected dates that prevents return results. Should have been reported through a notice in this case.</p>
     <p>Try to restart the parameters and / or select a different combination of parameters (minimum date of entry and departure) to perform a new search.</p>
-    <a href="#" id="booking_next" class="btn btn-next">Next</a>
-    <a href="#" class="btn btn-link cancel-booking">Cancel</a>
   </section>
 </div>
