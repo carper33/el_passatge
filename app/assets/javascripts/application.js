@@ -16,10 +16,6 @@
 //= require turbolinks
 //= require_tree .
 //= require smooth_scrolling
-//calendario date arrival
-$(function (){
-        $('#booking_date_arrival').datepicker();
-});
 
 
 $(function(){
@@ -37,6 +33,8 @@ $(function(){
   });
  (function(){
   smooth_scrolling();
+  $('#date_arrival').datepicker({ dateFormat: "yy-mm-dd" });
+  $('#date_departure').datepicker({ dateFormat: "yy-mm-dd" });
  }());
 
 
