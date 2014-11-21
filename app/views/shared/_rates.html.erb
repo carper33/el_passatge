@@ -1,6 +1,6 @@
 <section id="rates">
   <article class="rates row">
-    <table id="table_rates" class="table">
+    <table id="table_rates" class="medium-12 table" role="grid">
       <thead>
         <tr>
           <th></th>
@@ -9,6 +9,16 @@
           <th>TEMPORADA ALTA</th>
         </tr>
       </thead>
+      <tbody>
+        <% @rooms.each do | room | %>
+        <tr>
+          <th><%= room.name  %></th>
+          <td class="text-center"><%= room.price_low  %></td>
+          <td class="text-center"><%= room.price_mid  %></td>
+          <td class="text-center"><%= room.price_high  %></td>
+        </tr>
+        <% end %>
+      </tbody>
     </table>
   </article>
 </section>

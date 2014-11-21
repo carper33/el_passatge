@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="medium-3 columns">
+    <h2>Creating Booking</h2>
+    <%= form_for @booking, url: {action: "create"}  do |f| %>
+
+      <%= f.label :pax %>
+      <%= f.text_field :pax, required: true, size:4 %>
+      <%= f.label :date_arrival %>
+      <%= f.date_field :date_arrival, required: true, size:4%>
+      <%= f.label :date_departure %>
+      <%= f.date_field :date_departure, required: true, size:4 %>
+      <% rooms_array = @rooms.map{|room| [ room.name, room.id]}%>
+      <%= f.label :room_id %>
+      <%= f.select(:room_id, rooms_array) %>
+
+      <%= f.submit 'Save'%>
+
+    <%end%>
+  </div>
+</div>

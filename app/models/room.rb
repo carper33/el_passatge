@@ -7,5 +7,8 @@ class Room < ActiveRecord::Base
 	validates :price_low, presence: true, numericality: true
 	validates :description, presence: true
 
+  def self.all_rooms
+    all
+  end
 
 end

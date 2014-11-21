@@ -1,21 +1,6 @@
-
-<%= form_for @booking, url: {action: "create"}  do |f| %>
-
-	<%= f.label :pax %>
-	<%= f.text_field :pax, required: true, size:4 %>
-	<br>
-	<%= f.label :date_arrival %>
-	<%= f.text_field :date_arrival, required: true, size:4%>
-	<br>
-	<%= f.label :date_departure %>
-	<%= f.text_field :date_departure, required: true, size:4 %>
-	<br>
-	<% rooms_array= Room.all.map{|room| [ room.name, room.id]}%>
-	<%= f.label :room_id %>
-	<%= f.select(:room_id, rooms_array) %>
-	<br>
-
-	<%= f.submit 'Save'%>
-
-<%end%>
-
+<div id="booking_container"></div>
+<%= render "shared/orbit" %>
+<%= render "shared/rooms" %>
+<%= render "shared/services" %>
+<%= render "shared/rates" %>
+<%= render "shared/contact" %>
