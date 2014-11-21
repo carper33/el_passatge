@@ -25,7 +25,7 @@ $(function(){
       timer_speed: 3000,
       pause_on_hover: true,
       animation_speed: 500,
-      navigation_arrows: true,
+      navigation_arrows: false,
       bullets: true,
     }
     //// se toca hasta aqui
