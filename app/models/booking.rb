@@ -2,6 +2,7 @@ class Booking < ActiveRecord::Base
 	belongs_to :rooms
 	belongs_to :users
 
+
 	validates :pax, presence: true
 	validates :date_arrival, presence: true
 	validates :date_departure, presence: true
