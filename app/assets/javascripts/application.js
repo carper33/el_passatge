@@ -32,6 +32,8 @@ $(function(){
   });
  (function(){
   smooth_scrolling();
+  $('#date_arrival').datepicker({ dateFormat: "yy-mm-dd" });
+  $('#date_departure').datepicker({ dateFormat: "yy-mm-dd" });
  }());
 
 
