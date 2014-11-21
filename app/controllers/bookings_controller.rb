@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @rooms    = Room.all
+    @booking  = Booking.new
   end
 
 	def new
