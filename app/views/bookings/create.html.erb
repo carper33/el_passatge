@@ -1,23 +1,37 @@
-<div class="row">
-  <div class="medium-3 columns">
+<section class = "row">
 
-    <%= form_for @user, url: {controller: "users", action: "create"}  do |f| %>
+  <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+      <li role="menuitem"><a href="#">Booking Form</a></li>
+      <li role="menuitem"><a href="#booking_description">Booking Description</a></li>
+      <li role="menuitem"><a href="#">Personal Data</a></li>
+      <li role="menuitem" class="unavailable" role="button" aria-disabled="true"><a href="#">Confirmation & Payment</a></li>
+  </nav>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, required: true %>
-      <%= f.label :email %>
-      <%= f.email_field :email, required: true %>
-      <%= f.label :phone %>
-      <%= f.text_field :phone, required: true, size: 9 %>
+  <section class="form">
+  <h2><small>Please, fill the form with your personal info</small></h2>
+    <div class="columns medium-6">
+      <img src="https://dl.dropboxusercontent.com/u/79814994/cdn.images/4-big-fitness.jpg" alt="Logo Hotel" class="left">
+    </div>
+    <div class="columns medium-6">
+      <%= form_for @user, url: {controller: "users", action: "create"}  do |f| %>
 
-      <%= fields_for :booking, @booking do | b | %>
-        <%= b.hidden_field 'room_id',value: @booking[:room_id] %>
-        <%= b.hidden_field 'date_departure',value: @booking[:date_departure] %>
-        <%= b.hidden_field 'date_arrival',value: @booking[:date_arrival] %>
-        <%= b.hidden_field 'pax',value: @booking[:pax] %>
-      <% end %>
-      <%= f.submit 'Save'%>
+            <%= f.label :name %>
+            <%= f.text_field :name, required: true %>
+            <%= f.label :email %>
+            <%= f.email_field :email, required: true %>
+            <%= f.label :phone %>
+            <%= f.text_field :phone, required: true, size: 9 %>
 
-    <%end%>
-  </div>
-</div>
+            <%= fields_for :booking, @booking do | b | %>
+              <%= b.hidden_field 'room_id',value: @booking[:room_id] %>
+              <%= b.hidden_field 'date_departure',value: @booking[:date_departure] %>
+              <%= b.hidden_field 'date_arrival',value: @booking[:date_arrival] %>
+              <%= b.hidden_field 'pax',value: @booking[:pax] %>
+            <% end %>
+            <%= f.submit 'Save'%>
+
+          <%end%>
+    </div>
+
+  </section>
+</section>

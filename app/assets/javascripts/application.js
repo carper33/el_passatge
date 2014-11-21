@@ -17,7 +17,6 @@
 //= require_tree .
 //= require smooth_scrolling
 
-
 $(function(){
  $(document).foundation({
     ///se toca a partir de aqui
