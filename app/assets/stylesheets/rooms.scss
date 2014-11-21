@@ -1,0 +1,48 @@
+@import "variables";
+.relative-container{
+	.img-room{
+		&:hover{
+			opacity: 0.3;
+			&+.rooms_coment{
+				display: block;
+			}
+		}
+		&+.rooms_coment{
+			display: none;
+			text-align: center;
+			padding-left: 40px;
+		}
+	}
+}
+.relative-container{
+  position: relative;
+
+}
+
+.right2{
+	padding-right: 15px;
+}
+.foto1{
+	width: 515px;
+	height: 431px;
+}
+
+.foto4{
+	width: 258px;
+	height: 212px;
+}
+
+.foto5{
+	width: 515px;
+	height: 212px;
+}
+
+.foto6{
+	width: 773px;
+	height: 212px;
+}
+
+.foto7{
+	width: 773px;
+	height: 456px;
+}

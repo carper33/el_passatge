@@ -1,19 +1,18 @@
-<div class="medium-3 columns">
-    <%= f.label :pax %>
-    <%= f.text_field :pax,  :required => true, size: 4 %>
-    <br>
-    <%= f.label :date_arrival %>
-    <%= f.text_field :date_arrival, required: true, size:4%>
-    <br>
-    <%= f.label :date_departure %>
-    <%= f.text_field :date_departure, size:4 %>
-    <br>
-    <% rooms_array= Room.all.map( |room| [ room.name, room.id] ) %>
-    <%= f.label :room_id %>
-    <%= f.select(:room_id, rooms_array) %>
-    <br>
+<%= form_for @booking, url: {action: "create", controller: "bookings"}  do |f| %>
 
-    <%= f.submit 'Save'%>
-
-  <%end%>
-</div>
+	<%= f.label :pax %>
+	<%= f.select(:pax, [['1',1],['2',2],['3',3],['4',4]]) %>
+	<br>
+	<%= f.label :date_arrival %>
+	<%= f.text_field :date_arrival, required: true, id: 'date_arrival', size:4 %>
+	<br>
+	<%= f.label :date_departure %>
+	<%= f.text_field :date_departure, required: true, id: 'date_departure', size:4 %>
+	<br>
+	<% rooms_array= Room.all.map{|room| [room.name, room.id]}%>
+	<%= f.label :room_id %>
+	<%= f.select(:room_id, rooms_array) %>
+	<br>
+	<%= f.submit "clear", :type => "reset", class: "btn cancel-booking" %>
+	<%= f.submit "next", class: "btn btn-next" %>
+<%end%>
