@@ -1,12 +1,16 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
 
 	body{
 		color: grey;
 	}
   .form .column, .form .columns {
     padding-left: 0
+  }
+  .dr .column, .dr .columns {
+    padding-right: 0
   }
   .top-bar .name h1 a{
     padding: 0;
@@ -31,4 +35,21 @@
   	height: 500px;
   	margin: 0 auto;
   }
-  #map-canvas{max-width:100%;height:431px;}
+  #map-canvas{
+    max-width:100%;
+    height:431px;
+  }
+  .top-bar-section li.active:not(.has-form) a:not(.button) {
+    padding: 0 21.66667px;
+    line-height: 65px;
+    color: rgba(50, 127, 166, 0.9);
+    background: #EBF5F9;
+  }
+  // boton booking
+  .top-bar-section li:not(.has-form) a:not(.button).bookingbutton{
+    background-color: rgba(50, 127, 166, 0.9);
+    color: white;
+  }
+  .send{
+    margin: 0;
+  }
