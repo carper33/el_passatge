@@ -9,10 +9,8 @@ class UsersController < ApplicationController
     if @user.save
 
       @booking = user.bookings.new booking_params
+      @booking.save
       msg_save = 'Booking saved'
-
-      @booking.valid?
-      @booking.errors.full_messages
 
       render 'new'
     else
